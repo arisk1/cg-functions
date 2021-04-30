@@ -37,9 +37,20 @@ const priceOfCoins = async (coins, currency) => {
     }
 }
 
+const supportedCurrencies = async() => {
+	const url = apiUrl + "/simple/supported_vs_currencies"
+	 try {
+        return await axios.get(url)
+    } catch (error) {
+        console.error(error)
+    }
+
+}
+
 module.exports = {
     coinList,
     coinListMarkets,
     pingApi,
-    priceOfCoins
+    priceOfCoins,
+    supportedCurrencies
 }
