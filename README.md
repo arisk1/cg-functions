@@ -9,7 +9,7 @@ $ npm i @arisk1/cg-functions
   checks if the API is live.
   in success it returns "gecko_says": "(V3) To the Moon!"
 
-## coinListMarkets(currency,order,pageIndex)
+## coinListMarkets(currency,order,pageIndex,sparkline)
 returns 100 coins per page, no pagination required.
 
 -currency : results will be displayed in the currency of your choice ex.USD,EUR etc
@@ -18,7 +18,8 @@ returns 100 coins per page, no pagination required.
 
 -pageIndex : the number of the page you wish to recieve. 
 
-if you do not provide non of the three arguments there is a set of default values assinged to them : currency: USD , order : market_cap_desc , pageIndex : 1
+-sparkline : boolean , return the sparkline in case you want to draw a chart.
+
   
 ## coinList() 
 List all supported coins id, name and symbol (no pagination required)

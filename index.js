@@ -11,8 +11,8 @@ const coinList =async () => {
     }
 }
 
-const coinListMarkets = async (currency, order , pageIndex ) => {
-    const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&order=" + (order) + "market_cap_desc&per_page=100&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline=false&price_change_percentage=24h%2C7d%2C14d";
+const coinListMarkets = async (currency, order , pageIndex , sparkline) => {
+    const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&order=" + (order) + "market_cap_desc&per_page=100&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline="+ (sparkline) +"&price_change_percentage=24h%2C7d%2C14d";
     try {
         return await axios.get(url);
         
