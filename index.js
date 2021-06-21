@@ -11,14 +11,26 @@ const coinList =async () => {
     }
 }
 
-const coinListMarkets = async (currency, order , pageIndex , sparkline , perPage) => {
-    const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&order=" + (order) + "market_cap_desc&per_page="+(perPage)+"&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline="+ (sparkline) +"&price_change_percentage=24h%2C7d%2C14d";
+const coinListMarkets = async (currency, coins, order , pageIndex , sparkline , perPage) => {
+
+    if(coins.length === 0){
+    	 const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&order=" + (order) + "market_cap_desc&per_page="+(perPage)+"&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline="+ (sparkline) +"&price_change_percentage=24h%2C7d%2C14d";
     try {
         return await axios.get(url);
         
     } catch (error) {
         console.error(error)
     }
+    }else{
+    	 const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&ids=" + coins.join('%2C') + "&order=" + (order) + "market_cap_desc&per_page="+(perPage)+"&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline="+ (sparkline) +"&price_change_percentage=24h%2C7d%2C14d";
+    try {
+        return await axios.get(url);
+        
+    } catch (error) {
+        console.error(error)
+    }
+    }
+   
 }
 const pingApi = async () => {
     const url = apiUrl + "/ping";
