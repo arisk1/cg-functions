@@ -8,11 +8,19 @@ $ npm i @arisk1/cg-functions
 ## pingApi() 
   checks if the API is live.
   in success it returns "gecko_says": "(V3) To the Moon!"
+  
+##coinInfo(coinId)
+return all available info for one coin
 
-## coinListMarkets(currency,order,pageIndex,sparkline,perPage)
+-coinId: the Id of coin
+
+## coinListMarkets(currency,coins,order,pageIndex,sparkline,perPage)
 returns 100 coins per page, no pagination required.
 
 -currency : results will be displayed in the currency of your choice ex.USD,EUR etc
+
+-coins : an array of coins we want to get information for.In case we provide an empty array 
+	 it returns every coin.
 
 -order : market_cap_desc for desceding order regarding the coin's marketcap, market_cap_asc  for ascending order regarding the coin's marketcap 
 

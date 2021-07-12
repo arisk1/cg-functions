@@ -11,6 +11,16 @@ const coinList =async () => {
     }
 }
 
+const coinInfo = async(coinId) => {
+    const url = apiUrl + "/coins/" + coinId;
+    try {
+        return await axios.get(url)
+    } catch (error) {
+        console.error(error)
+    }
+	
+}
+
 const coinListMarkets = async (currency, coins, order , pageIndex , sparkline , perPage) => {
 
     if(coins.length === 0){
