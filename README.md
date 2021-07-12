@@ -9,7 +9,7 @@ $ npm i @arisk1/cg-functions
   checks if the API is live.
   in success it returns "gecko_says": "(V3) To the Moon!"
   
-##coinInfo(coinId)
+## coinInfo(coinId)
 return all available info for one coin
 
 -coinId: the Id of coin
