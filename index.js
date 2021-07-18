@@ -81,6 +81,7 @@ const exchangeRates = async() => {
 module.exports = {
     coinList,
     coinInfo,
+    exchangeRates,
     coinListMarkets,
     pingApi,
     priceOfCoins,
