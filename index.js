@@ -72,7 +72,8 @@ const supportedCurrencies = async() => {
 const exchangeRates = async() => {
 	const url = apiUrl + '/exchange_rates';
 	try  {
-		return await axios.get(url);
+		const res = await axios.get(url);
+		return res.rates;
 	}catch(error){
 		console.log(erorr);
 	}
