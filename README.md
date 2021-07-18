@@ -12,6 +12,9 @@ $ npm i @arisk1/cg-functions
 ## coinInfo(coinId)
 return all available info for one coin
 
+## exchangeRates()
+return exchange rates for btc
+
 -coinId: the Id of coin
 
 ## coinListMarkets(currency,coins,order,pageIndex,sparkline,perPage)
