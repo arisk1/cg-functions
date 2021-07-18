@@ -69,6 +69,15 @@ const supportedCurrencies = async() => {
 
 }
 
+const exchangeRates = async() => {
+	const url = apiUrl + '/exchange_rates';
+	try  {
+		return await axios.get(url);
+	}catch(error){
+		console.log(erorr);
+	}
+}
+
 module.exports = {
     coinList,
     coinInfo,
