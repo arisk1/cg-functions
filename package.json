@@ -1,6 +1,6 @@
 {
   "name": "@arisk1/cg-functions",
-  "version": "7.2.0",
+  "version": "7.3.0",
   "description": "This npm package cointains functions that were created on top of coingecko api.",
   "license": "MIT",
   "repository": "arisk1/cg-fucntions",
