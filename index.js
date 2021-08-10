@@ -14,11 +14,12 @@ const coinList =async () => {
 
 const coinInfo = async(coinId) => {
     const url = apiUrl + "/coins/" + coinId;
-    try {
+	return await axios.get(url)
+    /*try {
         return await axios.get(url);
     } catch (error) {
         return error;
-    }
+    }*/
 	
 }
 
