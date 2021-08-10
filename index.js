@@ -28,8 +28,8 @@ const coinListMarkets = async (currency, coins, order , pageIndex , sparkline , 
     try {
         return await axios.get(url);
         
-    } catch (error) {
-        console.error(error);
+    } catch (e) {
+        console.error(e);
     }
     }else{
     	 const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&ids=" + coins.join('%2C') + "&order=" + (order) + "market_cap_desc&per_page="+(perPage)+"&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline="+ (sparkline) +"&price_change_percentage=24h%2C7d%2C14d";
