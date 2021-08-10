@@ -16,7 +16,7 @@ const coinInfo = async(coinId) => {
     try {
         return await axios.get(url);
     } catch (error) {
-        console.error(error);
+       return error
     }
 	
 }
