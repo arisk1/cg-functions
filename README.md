@@ -35,7 +35,7 @@ returns 100 coins per page, no pagination required.
 
   
 ## coinList() 
-List all supported coins id, name and symbol (no pagination required)
+List all supported coins' - id, name and symbol (no pagination required)
 
 ## priceOfCoins(coins,currency)
 
