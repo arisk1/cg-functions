@@ -4,11 +4,12 @@ const apiUrl = "https://api.coingecko.com/api/v3";
 
 const coinList =async () => {
     const url = apiUrl + "/coins/list";
-    try {
+	return await axios.get(url)
+    /*try {
         return await axios.get(url)
     } catch (error) {
 		return error;
-    }
+    }*/
 }
 
 const coinInfo = async(coinId) => {
