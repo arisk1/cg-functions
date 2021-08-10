@@ -4,22 +4,20 @@ const apiUrl = "https://api.coingecko.com/api/v3";
 
 const coinList =async () => {
     const url = apiUrl + "/coins/list";
-	return await axios.get(url)
-    /*try {
+    try {
         return await axios.get(url)
     } catch (error) {
-		return error;
-    }*/
+        console.error(error)
+    }
 }
 
 const coinInfo = async(coinId) => {
     const url = apiUrl + "/coins/" + coinId;
-	return await axios.get(url)
-    /*try {
+    try {
         return await axios.get(url);
     } catch (error) {
-        return error;
-    }*/
+        console.error(error);
+    }
 	
 }
 
@@ -31,7 +29,7 @@ const coinListMarkets = async (currency, coins, order , pageIndex , sparkline , 
         return await axios.get(url);
         
     } catch (error) {
-        return error;
+        console.error(error);
     }
     }else{
     	 const url = apiUrl + "/coins/markets?vs_currency=" + (currency) + "&ids=" + coins.join('%2C') + "&order=" + (order) + "market_cap_desc&per_page="+(perPage)+"&page="+(pageIndex ? pageIndex.toString() : "1")+"&sparkline="+ (sparkline) +"&price_change_percentage=24h%2C7d%2C14d";
@@ -39,7 +37,7 @@ const coinListMarkets = async (currency, coins, order , pageIndex , sparkline , 
         return await axios.get(url);
         
     } catch (error) {
-        return error
+        console.error(error)
     }
     }
    
@@ -49,7 +47,7 @@ const pingApi = async () => {
     try {
         return await axios.get(url);
     } catch (error) {
-        return error;
+        console.error(error);
     }
 }
 const priceOfCoins = async (coins, currency) => {
@@ -57,7 +55,7 @@ const priceOfCoins = async (coins, currency) => {
     try {
         return await axios.get(url);
     } catch (error) {
-        return error;
+        console.error(error);
     }
 }
 
@@ -66,7 +64,7 @@ const supportedCurrencies = async() => {
 	 try {
         return await axios.get(url);
     } catch (error) {
-        return error;
+        console.error(error);
     }
 
 }
