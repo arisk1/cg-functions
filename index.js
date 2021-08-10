@@ -75,7 +75,7 @@ const exchangeRates = async() => {
 		const res = await axios.get(url);
 		return res.rates;
 	}catch(error){
-		console.log(erorr);
+		console.log(error);
 	}
 }
 
