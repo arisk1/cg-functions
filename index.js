@@ -95,5 +95,6 @@ module.exports = {
     coinListMarkets,
     pingApi,
     priceOfCoins,
-    supportedCurrencies
+    supportedCurrencies,
+	globalInfo
 }
