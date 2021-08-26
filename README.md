@@ -12,6 +12,9 @@ $ npm i @arisk1/cg-functions
 ## coinInfo(coinId)
 return all available info for one coin
 
+## globalInfo()
+return  cryptocurrency global data
+
 ## exchangeRates()
 return exchange rates for btc
 

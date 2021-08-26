@@ -13,13 +13,22 @@ const coinList =async () => {
 
 const coinInfo = async(coinId) => {
     const url = apiUrl + "/coins/" + coinId;
-	return await axios.get(url)
+	return await axios.get(url);
     /*try {
         return await axios.get(url);
     } catch (error) {
        return error
     }*/
 	
+}
+
+const globalInfo = async() => {
+    const url = apiUrl + "/global";
+    try {
+        return await axios.get(url)
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 const coinListMarkets = async (currency, coins, order , pageIndex , sparkline , perPage) => {
