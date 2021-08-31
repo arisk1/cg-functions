@@ -22,6 +22,11 @@ const coinInfo = async(coinId) => {
 	
 }
 
+const chartInfo = async (coinId,currency,days) => {
+	const url = apiUrl + "/coins/" + coinId + "/market_chart?vs_currency="+ currency +"&days="+ days;
+	return await axios.get(url);
+}
+
 const globalInfo = async() => {
     const url = apiUrl + "/global";
     try {
@@ -96,5 +101,6 @@ module.exports = {
     pingApi,
     priceOfCoins,
     supportedCurrencies,
-	globalInfo
+	globalInfo,
+	chartInfo
 }

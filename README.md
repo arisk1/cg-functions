@@ -15,6 +15,12 @@ return all available info for one coin
 ## globalInfo()
 return  cryptocurrency global data
 
+## chartInfo(coinId , currency , days)
+return  market info for 
+-coinId : id of the coin ,
+-currency : in the selected currency ,
+-days : in the selected amount of days
+
 ## exchangeRates()
 return exchange rates for btc
 
